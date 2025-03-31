@@ -1,0 +1,21 @@
+{
+  "name": "pair-programming-session-js",
+  "version": "1.0.0",
+  "description": "Causaly Pair Programming Session",
+  "main": "src/index.js",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "vitest",
+    "lint": "eslint ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "vitest": "^1.2.2",
+    "eslint": "^8.56.0",
+    "prettier": "^3.2.5"
+  }
+}

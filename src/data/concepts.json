@@ -1,0 +1,104 @@
+{
+  "metadata": {
+    "version": "0.0.1",
+    "url": "/rest/v0/concepts/search?q=INS"
+  },
+  "data": [
+    {
+      "id": "Z200000872",
+      "name": "INS",
+      "evidence_count": 249886,
+      "primary_category": {
+        "id": "CSLYT000001",
+        "name": "Specific target"
+      },
+      "entry_term": "INS",
+      "external_ids": [
+        {
+          "id": "3630",
+          "type": "Entrez"
+        },
+        {
+          "id": "6081",
+          "type": "HGNC"
+        },
+        {
+          "id": "ENSG00000254647",
+          "type": "Ensembl"
+        },
+        {
+          "id": "P01308",
+          "type": "UniProt"
+        }
+      ]
+    },
+    {
+      "id": "C0021571",
+      "name": "Insect Hormones",
+      "evidence_count": 1206480,
+      "primary_category": {
+        "id": "CHEM",
+        "name": "Chemicals & Drugs"
+      },
+      "entry_term": "Insect Hormone",
+      "external_ids": []
+    },
+    {
+      "id": "C3813208",
+      "name": "Proinsulin, human",
+      "evidence_count": 2350,
+      "primary_category": {
+        "id": "CHEM",
+        "name": "Chemicals & Drugs"
+      },
+      "entry_term": "INS",
+      "parent_concept_id": "Z200000872",
+      "external_ids": []
+    },
+    {
+      "id": "C1337112",
+      "name": "INS gene",
+      "evidence_count": 2062,
+      "primary_category": {
+        "id": "GENE",
+        "name": "Genes & Molecular Sequences"
+      },
+      "entry_term": "INS",
+      "parent_concept_id": "Z200000872",
+      "external_ids": []
+    },
+    {
+      "id": "C0004048",
+      "name": "Inspiration function",
+      "evidence_count": 184423,
+      "primary_category": {
+        "id": "PHYS",
+        "name": "Physiology"
+      },
+      "entry_term": "inspir",
+      "external_ids": []
+    },
+    {
+      "id": "C0021576",
+      "name": "Insecticides",
+      "evidence_count": 242856,
+      "primary_category": {
+        "id": "CHEM",
+        "name": "Chemicals & Drugs"
+      },
+      "entry_term": "insecticide",
+      "external_ids": []
+    },
+    {
+      "id": "C0232352",
+      "name": "Vascular insufficiency",
+      "evidence_count": 825037,
+      "primary_category": {
+        "id": "DISO",
+        "name": "Disorders"
+      },
+      "entry_term": "insufficiency vascular",
+      "external_ids": []
+    }
+  ]
+}
