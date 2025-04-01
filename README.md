@@ -2,7 +2,7 @@
 
 Welcome to your pair programming session! We're excited to work together on this project. This is a great opportunity for us to collaborate, share ideas, and see how we work together while solving some interesting technical challenges.
 
-We'll be working with a dataset of scientific concepts and implementing various data processing functions. Think of this as a real-world scenario where we're pair programming on a feature together.
+We'll be working with a dataset of biomedical concepts and implementing various data processing functions. Think of this as a real-world scenario where we're pair programming on a feature together.
 
 Good luck! Remember to communicate your thought process as
 you work through the tasks.
@@ -40,21 +40,25 @@ src/
 
 ## Data Structure
 
-We're working with scientific concepts that look like this:
+We're working with biomedical concepts that look like this:
 
 ```typescript
 interface Concept {
-  id: string; // Unique identifier
-  name: string; // Concept name
-  evidence_count: number; // Number of evidence items
+  // Unique identifier
+  id: string;
+  // Concept name
+  name: string;
+  // Number of occurrences in corpus
+  evidence_count: number;
+  // Category information
   primary_category: {
-    // Category information
     id: string;
     name: string;
   };
-  entry_term: string; // Alternative name
+  // Alternative name
+  entry_term: string;
+  // References to external data sources
   external_ids: Array<{
-    // External references
     id: string;
     type: string;
   }>;
