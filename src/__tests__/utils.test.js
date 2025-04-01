@@ -8,8 +8,8 @@ describe.only("filterConceptsByCategory", () => {
     expect(Array.isArray(filtered)).toBe(true);
     expect(
       filtered.every(
-        (concept) => concept.primary_category.name === "Chemicals & Drugs"
-      )
+        (concept) => concept.primary_category.name === "Chemicals & Drugs",
+      ),
     ).toBe(true);
   });
 
@@ -19,17 +19,17 @@ describe.only("filterConceptsByCategory", () => {
     expect(filtered).toBeDefined();
     expect(Array.isArray(filtered)).toBe(true);
     expect(
-      filtered.every((concept) => concept.evidence_count > minEvidence)
+      filtered.every((concept) => concept.evidence_count > minEvidence),
     ).toBe(true);
   });
 
-  test("should handle invalid inputs and edge cases", () => {
-    // Should handle non-existent category
+  test("should handle non-existent category", () => {
     const result = filterConceptsByCategory("NonExistentCategory");
     expect(Array.isArray(result)).toBe(true);
     expect(result.length).toBe(0);
+  });
 
-    // Should handle concepts with missing properties
+  test("should handle concepts with missing properties", () => {
     const filtered = filterConceptsByCategory("Chemicals & Drugs");
     expect(
       filtered.every(
@@ -37,8 +37,8 @@ describe.only("filterConceptsByCategory", () => {
           concept &&
           concept.primary_category &&
           concept.primary_category.name &&
-          concept.evidence_count !== undefined
-      )
+          concept.evidence_count !== undefined,
+      ),
     ).toBe(true);
   });
 });
@@ -54,7 +54,7 @@ describe("searchAndGroupConcepts", () => {
       expect(Array.isArray(concepts)).toBe(true);
       expect(concepts.length).toBeLessThanOrEqual(5);
       expect(concepts.every((c) => c.primary_category.name === category)).toBe(
-        true
+        true,
       );
     });
   });
@@ -70,15 +70,16 @@ describe("searchAndGroupConcepts", () => {
     Object.values(results).forEach((concepts) => {
       for (let i = 1; i < concepts.length; i++) {
         expect(
-          concepts[i - 1].evidence_count >= concepts[i].evidence_count
+          concepts[i - 1].evidence_count >= concepts[i].evidence_count,
         ).toBe(true);
       }
     });
   });
 
-  test("should handle empty or invalid search terms", () => {
-    expect(() => searchAndGroupConcepts("")).not.toThrow();
-    expect(() => searchAndGroupConcepts(null)).toThrow();
-    expect(() => searchAndGroupConcepts(undefined)).toThrow();
-  });
+  test.each(["", null, undefined])(
+    "should handle empty or invalid search terms",
+    (input) => {
+      expect(() => searchAndGroupConcepts(input)).toThrow();
+    },
+  );
 });

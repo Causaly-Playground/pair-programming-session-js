@@ -20,8 +20,8 @@ const DEBUG = true;
 export const filterConceptsByCategory = (categoryName, minEvidence = 0) => {
   const isDebug = DEBUG;
 
-  const results = conceptsData.data.filter((concept) => {
-    return (concept.primary_category.name = categoryName);
+  const results = getConcepts().filter((concept) => {
+    concept.primary_category.name = categoryName;
   });
 
   return results.map((concept) => {
